@@ -1,20 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import Header from "./header";
+import "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-
+import { Container, Row, Col } from "react-bootstrap";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <StyledDiv>sefsdf </StyledDiv>
+      <Container>
+        <Row>
+          <Col>
+            <Card>sefsdf </Card>
+          </Col>
+          <Col>
+            <Card>sefsdf </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Card>sefsdf </Card>
+          </Col>
+          <Col>
+            <Card>sefsdf </Card>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
 
-const StyledDiv = styled.div`
+const Card = styled.div`
   background: red;
+  position: relative;
 `;
 
 const rootElement = document.getElementById("root");
